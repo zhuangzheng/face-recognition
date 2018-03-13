@@ -21,11 +21,11 @@
 
      
 
-在训练时，模型的损失函数采用triplet loss,即用（A,P,N）图像对，A表示Anchor为一张面孔，Positive表示与Anchor同一人的脸，Negative表示另一个人的脸，当两
+在训练时，模型的损失函数采用triplet loss,即用（A,P,N）图像对，A表示Anchor为一张面孔，Positive表示与Anchor同一人的脸，Negative表示另一个人的脸，
 
-张脸属于同一人时，我们希望L2（A，P）尽可能小，当两者不同时，即L2（A，N）尽可能大，于是定义L=max(0,L2(A,P)-L2(A,N)+alpha),alpha为hyperparameter，项
+当两张脸属于同一人时，我们希望L2（A，P）尽可能小，当两者不同时，即L2（A，N）尽可能大，于是定义L=max(0,L2(A,P)-L2(A,N)+alpha),alpha是一个
 
-目中设为0.2,通过调整alpha,可以改变识别程序的精确度
+hyperparameter，项目中设为0.2,通过调整alpha,可以改变识别程序的精确度
 
 训练完成后，便可以进行身份验证和面部识别，两者使用的是同一个训练好的模型：
     用于身份验证的时候，比较目标和对应人的面部图片，在编码后向量的L2距离，小于一定值即为同一人（本项目中使用的阈值为0.7），否则输出False
