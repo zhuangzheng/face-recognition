@@ -2,7 +2,7 @@
 基于FaceNet Model的面部识别程序
 
 本项目是我在coursera上实现的一个项目的源代码，图文介绍及核心算法参见
-[这个页面]（https://github.com/zhuangzheng/face-recognition/blob/master/face-recognition.ipynb）
+[这个页面](https://github.com/zhuangzheng/face-recognition/blob/master/face-recognition.ipynb)
 数据集来自face.net
 
 下面简单介绍一个这个项目
